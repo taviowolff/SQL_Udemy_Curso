@@ -23,3 +23,15 @@ CREATE TABLE TELEFONE(
     TIPO ENUM('RES','COM','CEL') NOT NULL,
     NUMERO VARCHAR(20) NOT NULL
 );
+
+/* 
+Endereço é obrigatório cadastro de somente um.
+
+Telefone não é obrigatório cadastro de mais de um (opcional).
+*/
+
+/*
+Em relacionamentos 1 X 1 a chave estrangeira fica na tabela mais fraca
+
+Em relacionamentos 1 X n a chave estrangeira ficara sempre na cardinalidade n
+
