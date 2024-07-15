@@ -18,6 +18,8 @@ CREATE TABLE ENDERECO(
     REFERENCES CLIENTE(IDCLIENTE)
 );
 
+-- Inserção 1 x 1
+
 CREATE TABLE TELEFONE(
     IDTELEFONE INT PRIMARY KEY AUTO_INCREMENT,
     TIPO ENUM('RES','COM','CEL') NOT NULL,
@@ -26,5 +28,7 @@ CREATE TABLE TELEFONE(
     FOREIGN KEY (ID_CLIENTE)
     REFERENCES CLIENTE(IDCLIENTE)
 );
+
+-- Inserçãi 1 x N
 
 -- Sintaxe básica de uma construção física a partir do modelo 
