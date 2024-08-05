@@ -9,9 +9,9 @@ e cardinalidade dos dados dispostos em um banco de dados
 0,1 (não obirgatório/até um dado relacional)
 */
 
-CREATE TABLE Telfone (
+CREATE TABLE Telefone (
     IDtelefone INT PRIMARY KEY,
     numero VARCHAR(20),
     tipo VARCHAR(20),
     FOREIGN KEY (IDcliente) REFERENCES(telefone)
-)
+);
