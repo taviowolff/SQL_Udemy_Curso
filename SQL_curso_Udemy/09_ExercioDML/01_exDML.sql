@@ -73,4 +73,59 @@ INSERT INTO ENDERECO VALUES(NULL,'RUA GOMES FREIRE','CENTRO','RIO DE JANEIRO','R
 INSERT INTO ENDERECO VALUES(NULL,'RUA GOMES FREIRE','CENTRO','RIO DE JANEIRO','RJ',21);
 
 
+-- Aparece apenas os clientes com números
+SELECT  
+    CLIENTE.IDCLIENTE,
+    CLIENTE.NOME, 
+    CLIENTE.SEXO, 
+    TELEFONE.NUMERO
+FROM CLIENTE
+    INNER JOIN TELEFONE 
+    ON CLIENTE.IDCLIENTE = TELEFONE.ID_CLIENTE;
 
+-- Aparece os clientes com números e os sem números aparecem com valor NULL
+SELECT  
+    CLIENTE.IDCLIENTE,
+    CLIENTE.NOME, 
+    CLIENTE.SEXO, 
+    TELEFONE.NUMERO
+FROM CLIENTE
+    LEFT JOIN TELEFONE 
+    ON CLIENTE.IDCLIENTE = TELEFONE.ID_CLIENTE;
+
+/* Resto do Exercício */
+
+DESC CLINTE;
++-----------+---------------+------+-----+---------+----------------+
+| Field     | Type          | Null | Key | Default | Extra          |
++-----------+---------------+------+-----+---------+----------------+
+| IDCLIENTE | int           | NO   | PRI | NULL    | auto_increment |
+| NOME      | varchar(30)   | NO   |     | NULL    |                |
+| SEXO      | enum('M','F') | NO   |     | NULL    |                |
+| EMAIL     | varchar(50)   | YES  | UNI | NULL    |                |
+| CPF       | varchar(18)   | YES  | UNI | NULL    |                |
++-----------+---------------+------+-----+---------+----------------+
+
+DESC TELEFONE;
+
++------------+-------------------------+------+-----+---------+----------------+
+| Field      | Type                    | Null | Key | Default | Extra          |
++------------+-------------------------+------+-----+---------+----------------+
+| IDTELEFONE | int                     | NO   | PRI | NULL    | auto_increment |
+| NUMERO     | varchar(13)             | NO   |     | NULL    |                |
+| TIPO       | enum('RES','COM','CEL') | YES  |     | NULL    |                |
+| ID_CLIENTE | int                     | YES  | MUL | NULL    |                |
++------------+-------------------------+------+-----+---------+----------------+
+
+DESC ENDERECO;
+
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| IDENDERECO | int         | NO   | PRI | NULL    | auto_increment |
+| RUA        | varchar(30) | NO   |     | NULL    |                |
+| CIDADE     | varchar(30) | NO   |     | NULL    |                |
+| BAIRRO     | varchar(30) | NO   |     | NULL    |                |
+| ESTADO     | char(2)     | NO   |     | NULL    |                |
+| ID_CLIENTE | int         | YES  | UNI | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
