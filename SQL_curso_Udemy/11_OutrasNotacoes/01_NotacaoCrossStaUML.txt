@@ -5,5 +5,9 @@ Para acessar, vá ao endereço staruml.io
 Infelizmente é um programa com apenas 30 dias de uso grátis 
 
 BRmodelo é utilizado mais para literetaras/ mais leve / mais bugs
+Notação de Peter Chen - Modelo entidade relacionamento
+* é um dos formalismos mais interessantes para desenhar esquemas de bases de dados.
+Costuma cair em provas e modelagens mais metódicas.
+
 
 Staruml é mais utilizado por arquiteto de dados/ pesado/ poucos bugs
