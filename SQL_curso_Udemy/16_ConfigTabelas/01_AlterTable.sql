@@ -97,6 +97,19 @@ ADD FOREIGN KEY(ID_PESSOA)
 REFERENCES PESSOA(COLUNA1);
 
 
+-- SHOW CREATE TABLE TIME;
+
+| Table | Create Table                                                                                                                                                                                                                                                                                                                                                |
+
+| time  | CREATE TABLE `time` (
+  `IDTIME` int NOT NULL AUTO_INCREMENT,
+  `TIME` varchar(30) DEFAULT NULL,
+  `ID_PESSOA` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`IDTIME`),
+  KEY `ID_PESSOA` (`ID_PESSOA`),
+  CONSTRAINT `time_ibfk_1` FOREIGN KEY (`ID_PESSOA`) REFERENCES `pessoa` (`COLUNA1`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
+
 
 
 
