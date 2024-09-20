@@ -9,6 +9,7 @@ carro pode ter mais de uma cor. Sr. José necessita armazenar os telefones dos c
 sejam obrigatórios.
 */
 
+-- MINHA DATABASE
 CREATE DATABASE OFICINA;
 
 USE OFICINA;
